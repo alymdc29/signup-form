@@ -32,30 +32,37 @@
       <div class="form-heading">
         <h2>Let's do this!</h2>
       </div>
+      <form action="#" method="get">
       <div class="form">
           <div class="form-row">
             <label for="first-name" name="first-name">First name</label><br>
-            <input type="text" name="first-name">
+            <input type="text" name="first-name" 
+            pattern="(^[a-zA-Z]{2,20}(?: [a-zA-Z]{2,20})*$)"
+            title="Please enter a valid name"
+            id="input-field">
           </div>
           <div class="form-row">
             <label for="last-name" name="last-name">Last name</label><br>
-            <input type="text" name="last-name">
+            <input type="text" name="last-name" 
+            pattern="(^[a-zA-Z]{2,20}(?: [a-zA-Z]{2,20})*$)"
+            title="Please enter a valid name"
+            id="input-field">
           </div>
           <div class="form-row">
             <label for="user_email">Email Address</label><br>
-            <input type="email" id="user_email" name="email">
+            <input type="email" id="user_email" name="email" id="input-field">
           </div>
           <div class="form-row">
             <label for="phone_number">Phone Number</label><br>
-            <input type="tel" id="phone_number" name="phone_number">
+            <input type="tel" id="phone_number" name="phone_number" pattern="(\d{5,15})" title="Please enter a valid phone number" id="input-field">
           </div>
           <div class="form-row">
             <label for="password" id="password" name="password">Password</label><br>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required minlength="6" id="input-field">
           </div>
           <div class="form-row">
             <label for="confirm-password">Confirm Password</label><br>
-            <input type="password" name="confirm-password" id="confirm-password">
+            <input type="password" name="confirm-password" id="confirm-password" required id="input-field">
           </div>
     </div>
     </div>
@@ -63,6 +70,7 @@
       <div class="submit-btn">
         <button type="submit">Create Account</button>
       </div>
+    </form>
       <div class="footer-text">
         <p>Already have an account? <a href="#">Log in.</a></p>
       </div>
