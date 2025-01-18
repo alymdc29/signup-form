@@ -3,18 +3,28 @@
   padding: 0;
   font-family: Roboto, Arial;
 }
-
+body {
+  overflow-x: hidden;
+}
 .container {
   display: flex;
 }
-
 .left-side {
-  width: 40%;
+  min-width: 500px;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
-
+.left-side-footer {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+a {
+  color: white;
+}
 .img-container {
   background-image: url('/signup-form/images/background-img.jpg');
   background-position: left;
@@ -23,25 +33,22 @@
   height: 100%;
   width: 100%;
 }
-
 .text-container {
   top: 20%;
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: 100px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.562);
-  padding: 10px;
+  padding: 20px 0;
 }
-
 .text-container img {
   object-fit: contain;
   width: 20%;
   height: 100%;
 }
-
 h1 {
   text-transform: uppercase;
   display: flex;
@@ -52,20 +59,19 @@ h1 {
   font-weight: 400;
   color: rgb(240, 233, 233);
 }
-
 .right-side {
-  background-color: #12a0e724;
+  flex-grow: 1;
+  background-color: #12a0e72b;
   display: flex;
   flex-direction: column;
-  width: 60%;
-  position: relative;
+  gap: 40px;
+  justify-content: center;
 }
 
-.header {
-  margin-top: 30px;
-  padding: 40px;
-  margin-top: 40px;
+.right-side > div {
+  padding: 20px;
 }
+
 
 .header p {
   font-size: 25px;
@@ -74,16 +80,9 @@ h1 {
 
 .form-container {
   background-color: white;
-  top: 35%;
-  width: 100%;
-  position: absolute;
   box-shadow: 0px 6px 16px 0px rgba(69,69,69,0.56);
   background-color: #ffffffbd;
-}
-
-.form-heading {
-  padding: 15px 0 0 45px;
-
+  width: 100%;
 }
 
 .form-container h2 {
@@ -92,17 +91,14 @@ h1 {
 }
 
 .form {
-  padding: 13px 40px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 60%;
+  width: 400px;
 }
 
 .form-row {
   padding: 5px;
-  width: 50%;
-  box-sizing: border-box;
+  flex-grow: 1;
 }
 .form-row label {
   text-transform: uppercase;
@@ -113,9 +109,40 @@ h1 {
 .form-row input {
   margin-top: 3px;
   height: 25px;
-  width: 200px;
+  width: 150px;
   border: solid 1px gray;
   border-radius: 3px;
   padding-left: 7px;
   font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn > button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.footer-text {
+  margin-top: 15px;
+}
+
+.footer-text p {
+  font-size: 17px;
+}
+
+.footer-text a {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
 }
